@@ -21,6 +21,17 @@
   </script>
   <!-- End Google Tag Manager -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16953946924"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16953946924'); // Google Ads
+    gtag('config', 'G-7J4KP7PJBG');  // Google Analytics
+  </script>
+
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -45,22 +56,14 @@
       margin: 25px 0;
     }
   </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16953946924"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-16953946924'); // Google Ads
-    gtag('config', 'G-7J4KP7PJBG');  // Google Analytics
-  </script>
 </head>
+
 <body>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJLKLN2X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJLKLN2X"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
@@ -97,13 +100,30 @@
   <p>الطرق التي تعتمد على الدعاء، التخاطر، والطاقة النورانية مباحة ما دامت لا تضر أحدًا ولا تُخالف الدين. ولا تُستخدم السحر الأسود أو الوسائل المحرمة أبدًا في أعمالنا.</p>
 
   <h3>📞 هل ترغب في استشارة مجانية الآن؟</h3>
-<a href="https://wa.me/966597569404" 
-   class="btn-whatsapp" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   تحدث الآن عبر واتساب
-</a>
 
+  <a href="https://wa.me/966597569404"
+     class="btn-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     onclick="gtag_report_conversion('https://wa.me/966597569404');">
+     تحدث الآن عبر واتساب
+  </a>
+
+  <!-- كود تتبع التحويل -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16953946924/92HgCJL3lPAaEKzmopQ_',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 
 </body>
 </html>
